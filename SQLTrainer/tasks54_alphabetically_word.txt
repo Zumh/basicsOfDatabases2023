@@ -1,0 +1,11 @@
+Search for the first word in alphabetical order.
+Min of sum character from word show word that should appear in number 1.
+
+SELECT MIN(sana) FROM Sanat; 
+
+or
+Longer sql -
+SELECT sana FROM Sanat WHERE SUBSTR(sana, 1, 1) = 'a' ORDER BY sana LIMIT 1;
+
+SELECT MIN(word) FROM Words; 
+

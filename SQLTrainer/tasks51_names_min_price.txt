@@ -1,0 +1,4 @@
+All product with lowest price. 
+
+SELECT nimi FROM Tuotteet WHERE (SELECT MIN(hinta) FROM Tuotteet) = hinta;
+SELECT name FROM Product WHERE (SELECT MIN(price) FROM Product) = price;

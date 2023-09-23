@@ -1,0 +1,5 @@
+Search for all users who belong to more than one group.
+
+SELECT K.tunnus FROM Kayttajat K LEFT JOIN Oikeudet O ON K.id=O.kayttaja_id GROUP BY K.id HAVING COUNT(O.ryhma_id) > 1;
+
+SELECT K.id FROM Users K LEFT JOIN Rights O ON K.id=O.user_id GROUP BY K.id HAVING COUNT(O.group_id) > 1;

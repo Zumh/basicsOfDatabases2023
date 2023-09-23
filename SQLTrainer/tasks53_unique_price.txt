@@ -1,0 +1,6 @@
+Search for all products whose price is not on any other product.
+
+SELECT nimi FROM Tuotteet WHERE hinta IN (SELECT hinta FROM Tuotteet GROUP BY hinta HAVING COUNT(*)=1);
+
+SELECT name FROM Product WHERE price IN (SELECT price FROM Product GROUP BY price HAVING COUNT(*)=1);
+

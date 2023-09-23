@@ -1,0 +1,7 @@
+Calculate the maximum balance of each account in history (the balance of each account is initially 0).
+
+SELECT holder, IFNULL((SELECT MAX((SELECT SUM(change) FROM Transactions WHERE account_id=B.id AND id <= A.id)) FROM Transactions A),0) FROM Accounts B;
+
+SELECT haltija, IFNULL((SELECT MAX((SELECT SUM(muutos) FROM Tapahtumat WHERE tili_id=B.id AND id <= A.id)) FROM Tapahtumat A),0) FROM Tilit B;
+
+SELECT Ti.haltija, IFNULL(MAX(tb.value), 0) FROM Tilit Ti LEFT JOIN (SELECT B.tili_id id, IFNULL(SUM(B.muutos), 0) value FROM Tilit T, Tapahtumat A, Tapahtumat B WHERE A.tili_id=T.id AND B.tili_id=T.id AND B.id<=A.id GROUP BY A.id ORDER BY A.id) AS tb ON Ti.id = tb.id GROUP BY Ti.id;

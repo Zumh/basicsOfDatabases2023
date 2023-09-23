@@ -1,0 +1,8 @@
+
+Search alphabetically for the second word. You can assume that no two words are the same in the table.
+
+FINNISH - 
+SELECT sana FROM Sanat ORDER BY sana LIMIT 1 OFFSET 1;
+
+ENGLISH - 
+SELECT word FROM Words ORDER BY word LIMIT 1 OFFSET 1;

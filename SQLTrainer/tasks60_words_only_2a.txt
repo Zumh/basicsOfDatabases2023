@@ -1,0 +1,7 @@
+
+Search for all words that have exactly two letters "a".
+/*SELECT sana FROM Sanat WHERE LENGTH(sana) - LENGTH(REPLACE(sana, 'a', '')) = 2;*/
+
+SELECT sana FROM Sanat WHERE sana LIKE '%a%a%' AND sana NOT LIKE '%a%a%a%';
+
+SELECT wore FROM Words WHERE word LIKE '%a%a%' AND word NOT LIKE '%a%a%a%';

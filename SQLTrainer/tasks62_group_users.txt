@@ -1,0 +1,5 @@
+Search each group to see how many users are included in it.
+
+SELECT R.nimi, COUNT(O.ryhma_id) FROM Ryhmat R LEFT JOIN Oikeudet O ON R.id = O.ryhma_id GROUP BY R.id ;
+
+SELECT R.name, COUNT(O.group_id) FROM Groups R LEFT JOIN Rights O ON R.id = O.group_id GROUP BY R.id ;

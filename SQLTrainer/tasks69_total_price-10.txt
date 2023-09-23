@@ -1,0 +1,7 @@
+Calculate the number of ways you can choose two products so that the total price is equal to 10.
+
+Note! A combination can contain two of the same product and you want to calculate different combinations. In the example, the combinations are celery+celery and swede+ turnip (i.e. turnip+leek is not included).
+
+SELECT COUNT(*) FROM Tuotteet A, Tuotteet B WHERE A.hinta + B.hinta = 10 AND A.id <= B.id;
+
+SELECT COUNT(*) FROM Products A, Products B WHERE A.price + B.price = 10 AND A.id <= B.id;

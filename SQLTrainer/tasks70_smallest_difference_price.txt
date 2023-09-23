@@ -1,0 +1,5 @@
+Calculate what is the smallest difference in the price of two products.
+
+SELECT MIN(ABS(A.hinta - B.hinta)) FROM Tuotteet A, Tuotteet B WHERE A.id <> B.id;
+
+SELECT MIN(ABS(A.price - B.price)) FROM Products A, Products B WHERE A.id <> B.id;

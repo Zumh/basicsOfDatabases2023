@@ -1,0 +1,10 @@
+For each user, find out how many groups they are in.
+
+
+SELECT tunnus, COUNT(kayttaja_id) FROM Kayttajat LEFT JOIN Oikeudet ON id = kayttaja_id GROUP BY tunnus;
+
+SELECT K.tunnus, COUNT(O.ryhma_id) FROM Kayttajat K LEFT JOIN Oikeudet O ON K.id=O.kayttaja_id GROUP BY K.id;
+
+SELECT user, COUNT(group_id) FROM Users LEFT JOIN Rights ON Users.id = Right.group_id GROUP BY Users.id; 
+
+

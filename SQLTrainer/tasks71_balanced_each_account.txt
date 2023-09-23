@@ -1,0 +1,5 @@
+Calculate the balance of each account based on transactions (the balance of each account is initially 0).
+
+SELECT Ti.holder, IFNULL(SUM(Ta.change), 0) FROM Accounts Ti LEFT JOIN Events Ta ON Ti.id = Ta.account_id GROUP BY Ti.id;
+
+SELECT Ti.holder, IFNULL(SUM(Ta.change), 0) FROM Accounts Ti LEFT JOIN Events Ta ON Ti.id = Ta.account_id GROUP BY Ti.id;

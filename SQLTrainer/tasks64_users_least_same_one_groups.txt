@@ -1,0 +1,9 @@
+Search for all users who belong to at least one of the same groups as the user "uolevi".
+
+SELECT DISTINCT A.tunnus FROM Kayttajat A, Kayttajat B, Oikeudet X, Oikeudet Y WHERE A.id=X.kayttaja_id AND B.id=Y.kayttaja_id AND X.ryhma_id=Y.ryhma_id AND B.tunnus='uolevi';
+
+SELECT DISTINCT A.id FROM Users A, Users B, Rights X, Rights Y WHERE A.id=X.user_id AND B.id=Y.user_id AND X.group_id=Y.group_id AND B.id='uolevi';
+
+SELECT DISTINCT K.tunnus FROM Kayttajat K, Oikeudet O, (SELECT ryhma_id FROM Oikeudet O, Kayttajat K WHERE K.tunnus = 'uolevi' and O.kayttaja_id = K.id) groups  WHERE O.kayttaja_id = K.id AND groups.ryhma_id = O.ryhma_id;
+
+SELECT DISTINCT K.id FROM Agents K, Rights O, (SELECT group_id FROM Rights O, Agents K WHERE K.id = 'uolevi' and O.agent_id = K.id) groups WHERE O.agent_id = K.id AND groups.group_id = O.group_id;

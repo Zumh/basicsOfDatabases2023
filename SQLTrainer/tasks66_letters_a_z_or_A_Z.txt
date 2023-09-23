@@ -1,0 +1,5 @@
+Search for words arranged in such a way that letter size is irrelevant. Each word is made up of the letters a-z and A-Z.
+
+SELECT sana FROM Sanat ORDER BY LOWER(sana);
+
+SELECT word FROM Words ORDER BY LOWER(word);

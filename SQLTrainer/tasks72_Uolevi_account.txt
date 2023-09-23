@@ -1,0 +1,4 @@
+
+Calculate the history of the balance of the Uolevi account. Events are ordered according to the id.
+SELECT SUM(B.muutos) FROM Tilit T, Tapahtumat A, Tapahtumat B WHERE A.tili_id=T.id AND B.tili_id=T.id AND T.haltija="Uolevi" AND B.id<=A.id GROUP BY A.id ORDER BY A.id;
+SELECT SUM(B.change) FROM Accounts T, Transactions A, Transactions B WHERE A.account_id=T.id AND B.account_id=T.id AND T.holder="Uolevi" AND B.id<=A.id GROUP BY A.id ORDER BY A.id;

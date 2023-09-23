@@ -1,0 +1,5 @@
+Get the name of products that are up to twice the cheapest price 
+
+SELECT name FROM Product WHERE (SELECT MIN(price) * 2 FROM Product)*2 >= price; 
+
+SELECT nimi FROM Tuotteet WHERE (SELECT MIN(hinta) FROM Tuotteet)*2 >= hinta;

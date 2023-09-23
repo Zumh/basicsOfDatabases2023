@@ -1,0 +1,8 @@
+SELECT sana FROM Sanat WHERE SUBSTR(sana, 1, 1) = 'a';
+
+SELECT word FROM Words WHERE SUBSTR(word, 1, 1) = 'a';
+
+SELECT word FROM Words WHERE word LIKE 'a%'; 
+%a% mean in between 
+a% mean from the beginnning 
+%a mean from at the end

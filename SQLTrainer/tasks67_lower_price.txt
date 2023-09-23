@@ -1,0 +1,5 @@
+Search for the product with the lowest price (if there are several of the cheapest products, select the first one in alphabetical order).
+
+SELECT nimi, hinta FROM Tuotteet ORDER BY hinta, nimi LIMIT 1;
+
+SELECT name, price FROM Product ORDER BY price, name LIMIT 1;

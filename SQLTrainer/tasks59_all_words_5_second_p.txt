@@ -1,0 +1,5 @@
+
+Search for all words that have exactly five letters and the second letter is p.
+SELECT sana FROM Sanat WHERE sana LIKE '_p___';
+
+SELECT word FROM words WHERE word LIKE '_p___';

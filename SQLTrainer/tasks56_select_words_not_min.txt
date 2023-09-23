@@ -1,0 +1,7 @@
+Search all words except alphabetically first. You can assume that no two words are the same in the table.
+
+SELECT sana FROM Sanat WHERE sana NOT IN (SELECT MIN(sana) FROM Sanat);
+SELECT sana FROM Sanat ORDER BY sana LIMIT (SELECT COUNT(*)-1 FROM Sanat) OFFSET 1;
+
+SELECT word FROM Words WHERE word NOT IN (SELECT MIN(word) FROM Words);
+SELECT word FROM Words ORDER BY word LIMIT (SELECT COUNT(*) - 1 FROM Words) OFFSET 1;

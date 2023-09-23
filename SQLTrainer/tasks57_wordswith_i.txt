@@ -1,0 +1,4 @@
+Search for all words that contain the letter "i".
+SELECT sana FROM Sanat WHERE sana LIKE '%i%';
+
+SELECT word FROM Words WHERE word LIKE '%i%';

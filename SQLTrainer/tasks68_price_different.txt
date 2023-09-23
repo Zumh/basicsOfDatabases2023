@@ -1,0 +1,5 @@
+For each product, find out how many products differ in price by up to one (this includes the product itself).
+
+SELECT A.nimi, COUNT(A.id)  FROM Tuotteet A, Tuotteet B WHERE ABS(A.hinta - B.hinta) <= 1 GROUP BY A.id;
+
+SELECT A.name, COUNT(A.id) FROM Products A, Products B WHERE ABS(A.price - B.price) <= 1 GROUP BY A.id;
